@@ -9,12 +9,17 @@ public class ViewerApp {
         RemoteControl rc = new RemoteControl();
 
         PowerOn powerOn = new PowerOn(tv);
-        System.out.println(powerOn.execute());
+
+        rc.setCommand(powerOn);
+
+        System.out.println(rc.clickButton());
 
         PowerOff powerOff = new PowerOff(tv);
         System.out.println(powerOff.execute());
 
+        rc.setCommand(powerOff);
 
+        System.out.println(rc.clickButton());
 
     }
 }

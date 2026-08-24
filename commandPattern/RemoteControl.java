@@ -12,7 +12,7 @@ public class RemoteControl {
         this.command = command;
     }
 
-    public void clickButton(){
-        command.execute();
+    public String clickButton(){
+        return command.execute();
     }
 }
